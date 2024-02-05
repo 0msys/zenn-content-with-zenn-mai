@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  zenn-devcontainer:
+    container_name: zenn-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./:/workspace
+    ports:
+      - 50000:8000
+
+  zenn-mai:
+    container_name: zenn-mai
+    build:
+      context: .
+      dockerfile: ./zenn-mai/Dockerfile
+      target: prd
+    tty: true
+    volumes:
+      - ./:/workspace
+    ports:
+      - 50001:8501

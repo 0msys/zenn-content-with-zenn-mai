@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  zenn-mai-dev:
+    container_name: zenn-mai-dev
+    build:
+      context: ../
+      dockerfile: ./zenn-mai/Dockerfile
+      target: dev
+    tty: true
+    volumes:
+      - ../:/workspace

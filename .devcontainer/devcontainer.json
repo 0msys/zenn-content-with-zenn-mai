@@ -1,0 +1,17 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+  "name": "zenn-devcontainer",
+  "service": "zenn-devcontainer",
+  "workspaceFolder": "/workspace",
+  "dockerComposeFile": "../compose-dev.yml",
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mhutchie.git-graph",
+        "yzhang.markdown-all-in-one",
+        "ryu1kn.partial-diff"
+      ]
+    }
+  }
+}
